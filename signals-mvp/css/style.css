@@ -1,9 +1,0 @@
-body{background:#0c0f14;color:#d6e0ff;font-family:monospace;margin:0}
-.topbar{display:flex;justify-content:space-between;padding:10px;border-bottom:1px solid #222}
-.layout{display:grid;grid-template-columns:1fr 2fr 1fr;gap:10px;padding:10px}
-.panel{border:1px solid #222;padding:10px;border-radius:8px;background:#111}
-button{background:#111;color:#d6e0ff;border:1px solid #333;padding:8px;border-radius:6px;cursor:pointer}
-button:disabled{opacity:.4}
-.feed{max-height:60vh;overflow:auto}
-.msg{border:1px solid #222;padding:6px;border-radius:6px;margin-bottom:6px}
-.badge{border:1px solid #333;padding:2px 6px;border-radius:6px;margin-right:4px;font-size:11px}
