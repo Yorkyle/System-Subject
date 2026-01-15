@@ -12,10 +12,11 @@
   }
 
   function htmlWithBreaks(s){
-    // supports either literal \n sequences or actual newlines
-    const safe = esc(s);
-    return safe.replace(/\\n/g, "<br>").replace(/\n/g, "<br>");
-  }
+  // supports either literal \n sequences (backslash+n) or actual newline characters
+  const safe = esc(s);
+  return safe.replace(/\n/g, "<br>").replace(/
+/g, "<br>");
+}
 
   export function render(state, els, dispatch){
     // pills
