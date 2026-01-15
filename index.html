@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signals — MVP</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="dot"></div>
+      <div>
+        <div class="title">SIGNALS</div>
+        <div class="subtitle">intel terminal prototype</div>
+      </div>
+    </div>
+
+    <div class="status">
+      <div class="pill" id="pillScreen">SCREEN: —</div>
+      <div class="pill" id="pillRisk">RISK: 0</div>
+      <div class="pill" id="pillPulls">PULLS: —</div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel left">
+      <h2>CLUES</h2>
+      <div id="clues"></div>
+    </section>
+
+    <section class="panel center">
+      <h2>FEED</h2>
+      <div id="feed" class="feed"></div>
+      <div class="hint" id="hint"></div>
+    </section>
+
+    <section class="panel right">
+      <h2 id="rightTitle">CASES</h2>
+      <div id="right"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="small">
+      Tip: If JSON doesn't load, run a local server (see README).
+    </div>
+  </footer>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
