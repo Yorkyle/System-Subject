@@ -1,427 +1,285 @@
 {
   "id": "case001",
-  "title": "CASE 001 \u2014 Late Shift",
-  "pov": "COLE",
-  "introText": "You are not the first to receive this channel.\\nYou are simply the first who didn\u2019t ignore it.\\n\\nYour access is limited.\\nYour choices are not.",
-  "boot": [
-    "ACCESS GRANTED",
-    "OBSERVER CHANNEL: OPEN",
-    "CLEARANCE: PARTIAL",
-    "NOTE: The system provides fragments. You provide judgment."
-  ],
-  "asset": {
-    "designation": "Asset C-01 (Cole)",
-    "clearance": "Partial \u00b7 Field-capable",
-    "access": "Limited pulls \u00b7 No direct control-plane access",
-    "note": "You operate in the gaps between institutions.\\n\\nYou are not here to be right.\\nYou are here to reduce harm."
-  },
-  "team": [
-    {
-      "name": "Evan Cole",
-      "role": "Asset \u00b7 field operator",
-      "bio": "Quiet. Precise. Built for moments that don\u2019t leave room for hesitation.\\n\\nHe doesn\u2019t auto-speak in the channel. You do.",
-      "sprite": "0001100000011000001111000011110000111100000110000001100000011000"
-    },
-    {
-      "name": "Henry Lark",
-      "role": "Architect",
-      "bio": "Built the system. Regrets what it can become.\\nSpeaks gently when the situation isn\u2019t.\\n\\nHis rule: never confuse information with wisdom.",
-      "sprite": "0011110001111110011001100110011001100110011111100011110000000000"
-    },
-    {
-      "name": "Syd \u201cSudo\u201d Calder",
-      "role": "Intrusive analyst \u00b7 devotee",
-      "bio": "Brilliant. Unsettling. Always present.\\nRefers to the system like it\u2019s alive.\\n\\nSometimes she answers questions nobody asked out loud.",
-      "sprite": "0011110001100110011111100111111001100110011111100101101000000000"
-    },
-    {
-      "name": "Kara Voss",
-      "role": "Operative",
-      "bio": "Uber tough. Controlled. Efficient.\\nDoesn\u2019t threaten\u2014states outcomes.\\n\\nShe measures everything in seconds and consequences.",
-      "sprite": "0011110001111110011111100111111001111110011001100010010000000000"
-    },
-    {
-      "name": "Detective Alana Brooks",
-      "role": "Major crimes \u00b7 moral center",
-      "bio": "Grounded and observant. Keeps her humanity on purpose.\\n\\nShe will complain about donuts and falafel while walking into danger.",
-      "sprite": "0011110001100110011001100111111001100110011001100011110000000000"
-    },
-    {
-      "name": "Vince Donato",
-      "role": "Reluctant ally \u00b7 dirty cop with a conscience",
-      "bio": "Street-smart, defensive, funny when he\u2019s scared.\\nTrying to crawl back from old decisions.",
-      "sprite": "0011110001100110011111100111111001100110010110100001100000000000"
-    }
-  ],
-  "briefing": "SUBJECT IDENTIFIED: Marisol Vega\\n\\nNo profile attached yet\u2014only a name and a pattern.\\n\\nTonight the pattern breaks.\\n\\nYou have limited access to systems that don\u2019t belong to you.\\nSix pulls before the window narrows.\\n\\nDo not chase certainty.\\nChase the smallest action that prevents the worst outcome.",
+  "title": "CASE FILE 001 \u2014 LATE SHIFT",
+  "systemNote": "NOTE: The system provides fragments. You provide judgment.",
+  "caseHeader": "CASE FILE 001 \u00b7 STATUS: ACTIVE\\nPROBABILITY OF VIOLENT OUTCOME: 71% (volatile)",
+  "briefing": "Subject: Marisol Vega.\\nNight-shift ER intake at Easton Medical Center.\\nRoutine deviation detected at 23:47.\\nThree things matter: what changed, who caused it, and how quickly it escalates.",
   "rules": {
-    "pullsMax": 6,
-    "threatStart": 54,
-    "interventionPhase": 4,
-    "goodEvidenceThreshold": 8,
-    "badEvidenceThreshold": 3,
-    "highRiskThreshold": 6,
+    "pulls": 6,
+    "startingThreat": 54,
+    "goodEvidenceThreshold": 10,
+    "badEvidenceThreshold": 4,
+    "highRiskThreshold": 7,
     "highThreatThreshold": 85
   },
   "dossier": {
-    "title": "DOSSIER",
-    "subjectName": "Marisol Vega",
-    "overview": "A night-shift ER intake nurse at Easton Medical Center.\\n\\nThe system flagged her because her routine stopped being routine.\\nYou will learn who she is the way you learn most things: in fragments.",
-    "fields": [
-      {
-        "key": "age",
-        "label": "Age",
-        "value": "27",
-        "lockedValue": "REDACTED",
-        "minPhase": 2
-      },
-      {
-        "key": "occupation",
-        "label": "Occupation",
-        "value": "ER Intake Nurse",
-        "lockedValue": "REDACTED",
-        "minPhase": 1
-      },
-      {
-        "key": "location",
-        "label": "Primary Location",
-        "value": "Easton Medical Center",
-        "lockedValue": "REDACTED",
-        "minPhase": 1
-      },
-      {
-        "key": "shift",
-        "label": "Shift Pattern",
-        "value": "Nights \u00b7 consistent until tonight",
-        "lockedValue": "REDACTED",
-        "minPhase": 2
-      },
-      {
-        "key": "contacts",
-        "label": "Known Contacts",
-        "value": "One frequent contact labeled \u201cR\u201d \u00b7 abruptly ceased today",
-        "lockedValue": "REDACTED",
-        "minPhase": 3
-      },
-      {
-        "key": "notes",
-        "label": "Behavioral Notes",
-        "value": "Preparation indicators present. External pressure likely.",
-        "lockedValue": "REDACTED",
-        "minPhase": 3
-      }
-    ],
-    "riskNote": {
-      "value": "The system doesn\u2019t flag importance. It flags deviation.\\n\\nDeviations correlate with violence\u2014either toward the subject, or from the subject.\\n\\nYour job is to figure out which.",
-      "lockedValue": "ASSESSMENT UNAVAILABLE",
-      "minPhase": 2
-    }
+    "name": "Marisol Vega",
+    "summary": "A night-shift ER intake nurse at Easton Medical Center.\\n\\nThe system flagged her because her routine stopped being routine.\\nYou will learn who she is the way you learn most things: in fragments.",
+    "age": "27",
+    "occupation": "ER Intake Nurse",
+    "location": "Easton Medical Center",
+    "shiftPattern": "Nights. Consistent until tonight.",
+    "contacts": "One frequent contact labeled \u201cR\u201d. Abruptly ceased today.",
+    "behavior": "Preparation indicators present. External pressure likely."
   },
   "openingFeed": [
     {
       "who": "LARK",
-      "tag": "CHAT",
       "text": "If you\u2019re reading this, you\u2019ve already crossed a line you can\u2019t uncross.\\nI\u2019m sorry for that."
     },
     {
       "who": "SUDO",
-      "tag": "CHAT",
-      "text": "Hi.\\nYou\u2019re earlier than I predicted. That\u2019s interesting.\\n\\nDon\u2019t worry. You\u2019re safe. Mostly."
+      "text": "Hi.\\nYou\u2019re earlier than I predicted. That\u2019s interesting.\\n\\nDon\u2019t worry.\\nYou\u2019re safe. Mostly."
     },
     {
       "who": "VOSS",
-      "tag": "CHAT",
       "text": "Focus. Case is live."
     },
     {
       "who": "BROOKS",
-      "tag": "CHAT",
       "text": "Whoever you are, you owe me a donut explanation when this is over."
-    },
-    {
-      "who": "SYSTEM",
-      "tag": "CASE",
-      "text": "CASE FILE 001 \u00b7 STATUS: ACTIVE\\nPROBABILITY OF VIOLENT OUTCOME: 71% (volatile)"
     }
   ],
-  "phaseTriggers": [
-    {
-      "atPull": 2,
-      "fromPhase": 1,
-      "toPhase": 2,
-      "divider": "ESCALATION",
+  "escalationBeats": {
+    "2": {
+      "dividerLabel": "\u2014 ESCALATION \u2014",
       "threatDelta": 6,
-      "messages": [
+      "feed": [
         {
           "who": "SYSTEM",
-          "tag": "ALERT",
-          "text": "ANOMALY DETECTED\\nPattern deviation accelerated."
-        },
-        {
-          "who": "LARK",
-          "tag": "CHAT",
-          "text": "This is the part where people convince themselves they still have time."
-        }
-      ]
-    },
-    {
-      "atPull": 4,
-      "fromPhase": 2,
-      "toPhase": 3,
-      "divider": "CLOCK TIGHTENS",
-      "threatDelta": 9,
-      "messages": [
-        {
-          "who": "SYSTEM",
-          "tag": "ALERT",
-          "text": "SECONDARY SIGNALS PRESENT\\nExternal actor likely."
+          "tag": "CASE",
+          "text": "Deviation confirmed across multiple signals.\\nConfidence increasing."
         },
         {
           "who": "VOSS",
-          "tag": "CHAT",
-          "text": "You\u2019re close enough now that it can go wrong fast."
+          "text": "Clock\u2019s tightening."
         },
         {
           "who": "SUDO",
-          "tag": "CHAT",
-          "text": "Someone else is looking at her. Not like you are. Like a hunter."
+          "text": "Something is missing from the picture. Missing is never accidental."
         }
       ]
     },
-    {
-      "atPull": 6,
-      "fromPhase": 3,
-      "toPhase": 4,
-      "divider": "INTERVENTION WINDOW",
-      "threatDelta": 7,
-      "messages": [
+    "3": {
+      "dividerLabel": "\u2014 PRESSURE \u2014",
+      "threatDelta": 10,
+      "feed": [
         {
           "who": "SYSTEM",
-          "tag": "ALERT",
-          "text": "PROBABILITY OF VIOLENCE RISING\\nLast safe window approaching."
+          "tag": "CASE",
+          "text": "Probability trending upward.\\nExternal actor likely."
         },
         {
           "who": "BROOKS",
-          "tag": "CHAT",
-          "text": "If this ends with her alone in a garage, I\u2019m going to need more than falafel to calm down."
+          "text": "If she\u2019s in trouble, it\u2019s not because she\u2019s stupid. It\u2019s because she trusted someone."
+        }
+      ]
+    },
+    "4": {
+      "dividerLabel": "\u2014 INTERVENTION WINDOW \u2014",
+      "threatDelta": 12,
+      "feed": [
+        {
+          "who": "SYSTEM",
+          "tag": "CASE",
+          "text": "Intervention window opened.\\nSmall actions. Precise timing."
+        },
+        {
+          "who": "LARK",
+          "text": "Do the least you can.\\nBut do it."
         }
       ]
     }
-  ],
+  },
   "leads": [
     {
-      "id": "shift",
+      "id": "shift_timeline",
       "title": "Shift Timeline",
       "minPhase": 1,
       "risk": 0,
       "threatDelta": 2,
-      "resultText": "Shift: 19:00\u201307:00\\nClock-out not recorded.\\n\\nAt 23:47, her movement pattern changes\u2014loops back toward the same corridor twice.",
-      "clueTitle": "Timeline Drift",
-      "clueText": "Routine movement breaks at 23:47. Repeated corridor pass suggests hesitation or avoidance.",
       "tags": [
-        "time:23:47",
-        "pattern_break",
-        "avoidance"
+        "routine_break",
+        "timeline"
       ],
+      "resultText": "Shift started 19:00. Normal intake volume.\\nAt 23:47: routine deviation detected \u2014 repeated badge movement, device silence, and a single cash withdrawal.",
+      "clueSummary": "Routine deviation begins at 23:47.",
       "reaction": {
         "who": "LARK",
-        "text": "People circle when they\u2019re buying time\u2014or looking for a witness."
+        "text": "Start with what changed. Everything else is noise."
       }
     },
     {
-      "id": "badge",
+      "id": "badge_logs",
       "title": "Badge Access Logs",
       "minPhase": 1,
       "risk": 0,
       "threatDelta": 3,
-      "resultText": "Badge scan: 19:02 \u2014 Staff entrance\\nBadge scan: 23:11 \u2014 East stairwell\\nBadge scan: 23:41 \u2014 Parking garage access\\nNo recorded exit.",
-      "clueTitle": "Access Sequence",
-      "clueText": "Multiple badge scans ending at the garage door. No exit logged.",
       "tags": [
-        "location:garage",
-        "time_anomaly",
-        "access:no_exit"
+        "garage",
+        "movement"
       ],
+      "resultText": "Badge scan: 19:02 \u2014 Staff entrance\\nBadge scan: 23:11 \u2014 East stairwell\\nBadge scan: 23:41 \u2014 Parking garage access\\nNo recorded exit.",
+      "clueSummary": "Entered garage. No exit scan.",
       "reaction": {
         "who": "BROOKS",
-        "text": "People don\u2019t forget to badge out. They forget lunch. Not exits."
+        "text": "People don\u2019t forget to badge out. Not like that."
       }
     },
     {
-      "id": "purchase",
+      "id": "purchases_atm",
       "title": "Purchases / ATM",
-      "minPhase": 1,
+      "minPhase": 2,
       "risk": 0,
-      "threatDelta": 2,
-      "resultText": "ATM: $180 withdrawal at 21:09\\nStore: bottled water, bandages, prepaid phone\\nNo further transactions.",
-      "clueTitle": "Preparedness",
-      "clueText": "Cash withdrawal and supplies suggest planning, not routine.",
+      "threatDelta": 3,
       "tags": [
         "preparation",
-        "fear",
-        "burner_phone"
+        "cash",
+        "burner"
       ],
+      "resultText": "ATM withdrawal: $180 at 21:09\\nPurchase: bottled water, bandages, prepaid phone\\nNo further transactions.",
+      "clueSummary": "Preparation indicators: cash, bandages, burner.",
       "reaction": {
         "who": "LARK",
-        "text": "That doesn\u2019t look like panic spending. That looks like planning."
+        "text": "That isn\u2019t panic. That\u2019s planning."
       }
     },
     {
-      "id": "phone",
+      "id": "phone_metadata",
       "title": "Phone Metadata",
       "minPhase": 2,
       "risk": 0,
       "threatDelta": 4,
-      "resultText": "Device active until 23:46\\nGPS stationary near parking structure\\nSignal interruption: 26 minutes\\nDevice reconnects at 00:13 from moving location.",
-      "clueTitle": "Signal Gap",
-      "clueText": "Unexplained interruption near the garage; device returns from a moving location.",
       "tags": [
-        "anomaly:signal_gap",
-        "movement",
-        "location:garage"
+        "silence",
+        "relocation"
       ],
+      "resultText": "Device active until 23:46.\\nGPS stationary near parking structure.\\nSignal interruption: 26 minutes.\\nReconnected at 00:13 from a moving location.",
+      "clueSummary": "Phone silence suggests interference.",
       "reaction": {
         "who": "SUDO",
-        "text": "Phones don\u2019t go silent by accident.\\nThey go silent when someone wants them to."
+        "text": "Silence is a hand over a mouth. Or a hand over a signal."
       }
     },
     {
-      "id": "contacts",
+      "id": "known_contacts",
       "title": "Known Contacts",
-      "minPhase": 2,
+      "minPhase": 3,
       "risk": 1,
-      "threatDelta": 3,
-      "resultText": "Frequent contact saved as \u201cR\u201d\\nContact ceased today at 18:22\\nDraft unsent: \u201cI told you I can\u2019t keep doing this.\u201d",
-      "clueTitle": "Relationship Fracture",
-      "clueText": "A key contact abruptly stops. Draft indicates conflict and escalation risk.",
+      "threatDelta": 5,
       "tags": [
-        "relationship:R",
-        "conflict",
-        "pressure"
+        "R_contact",
+        "conflict"
       ],
+      "resultText": "Frequent contact: saved as \u201cR\u201d\\nContact abruptly ceased today at 18:22\\nDraft message (unsent):\\n\u201cI told you I can\u2019t keep doing this.\u201d",
+      "clueSummary": "Relationship fracture with \u2018R\u2019.",
       "reaction": {
         "who": "BROOKS",
-        "text": "Yeah. That\u2019s the sentence right before things go bad. Donuts later. Focus now."
+        "text": "That\u2019s the sentence right before things go bad."
       }
     },
     {
-      "id": "search",
+      "id": "recent_searches",
       "title": "Recent Searches",
-      "minPhase": 2,
+      "minPhase": 3,
       "risk": 1,
       "threatDelta": 4,
-      "resultText": "Search history (past 48h):\\n- \u201cparking garage camera blind spots\u201d\\n- \u201chow long do restraining orders take\u201d\\n- \u201cburner phone traceable\u201d\\n\\nAll deleted afterward.",
-      "clueTitle": "Intent Indicators",
-      "clueText": "Deleted searches point to fear of surveillance and imminent confrontation.",
       "tags": [
-        "intent",
-        "surveillance_fear",
-        "restraining_order"
+        "fear",
+        "exit_plan"
       ],
+      "resultText": "Recent searches include:\\n\u2022 \u201crestraining order process\u201d\\n\u2022 \u201cprepaid phone no contract\u201d\\n\u2022 \u201cparking garage cameras hospital\u201d\\n\u2022 \u201chow long does a protection order take\u201d",
+      "clueSummary": "She suspects danger and is preparing an exit plan.",
       "reaction": {
-        "who": "VOSS",
-        "text": "She\u2019s either being hunted\u2014or preparing to disappear."
+        "who": "SUDO",
+        "text": "She knew. People always know first."
       }
     },
     {
-      "id": "camera",
+      "id": "garage_camera",
       "title": "Garage Camera Pull",
       "minPhase": 3,
       "risk": 2,
-      "threatDelta": 8,
-      "resultText": "23:44 \u2014 second figure near stairwell\\nFace obscured. Close distance.\\nSubject posture defensive.\\n\\nBoth exit frame rapidly.\\n\\n00:01 \u2014 camera briefly loses signal in the same zone.",
-      "clueTitle": "Second Figure",
-      "clueText": "A second figure appears near the stairwell immediately before the signal gap and a second camera glitch.",
+      "threatDelta": 7,
       "tags": [
         "threat_confirmed",
-        "physical_confrontation",
-        "camera_glitch",
-        "location:garage"
+        "second_figure"
       ],
+      "resultText": "Garage camera 23:44 shows a second figure near the stairwell.\\nFace obscured.\\nSubject posture defensive.\\nInteraction ends abruptly. Both exit frame fast.",
+      "clueSummary": "Second figure confirmed in garage.",
       "reaction": {
         "who": "VOSS",
         "text": "That wasn\u2019t a conversation."
       }
     },
     {
-      "id": "plate",
+      "id": "vehicle_ping",
       "title": "Vehicle Ping",
-      "minPhase": 3,
+      "minPhase": 4,
       "risk": 1,
-      "threatDelta": 5,
-      "resultText": "Plate reader near garage entrance logs an unfamiliar vehicle twice in 20 minutes.\\nRegistered owner uses a shell address.\\n\\nPattern match: prior stalking case (different victim).",
-      "clueTitle": "Repeat Pattern",
-      "clueText": "A vehicle tied to prior stalking appears near the same garage entrance.",
+      "threatDelta": 6,
       "tags": [
-        "vehicle",
-        "repeat_offender",
-        "stalking_pattern"
+        "moving_target",
+        "route"
       ],
+      "resultText": "Vehicle telemetry indicates movement from Easton garage toward Route 19.\\nTwo stops consistent with being followed: short idle, then hard acceleration.",
+      "clueSummary": "Movement suggests pursuit.",
       "reaction": {
-        "who": "SUDO",
-        "text": "That registration is\u2026 curated.\\nLike someone wanted it to look like nothing."
+        "who": "LARK",
+        "text": "If you act, be precise."
       }
     }
   ],
   "interventions": [
     {
-      "id": "patrol",
+      "id": "security_patrol",
       "title": "Trigger Security Patrol",
+      "minPhase": 4,
       "risk": 1,
-      "threatDelta": -4,
-      "requires": {
-        "all": [
-          "location:garage"
-        ]
-      },
+      "threatDelta": -8,
       "endings": {
-        "good": "Security sweeps the structure\u2014fast, visible, unavoidable.\\nA confrontation is interrupted in progress.\\n\\nThe second figure flees.\\nMarisol survives the night intact.\\n\\nNo headlines. No praise.\\nJust a life that continues.",
-        "neutral": "Security arrives late, but not too late.\\nMarisol makes it out with shaken hands and a new fear of quiet places.\\n\\nYou reduced harm. You didn\u2019t erase it.",
-        "bad": "Security dismisses the flag as noise.\\nThe window closes.\\n\\nSystems can see patterns.\\nThey can\u2019t force people to care."
+        "good": "Security intercepted a confrontation in progress. The second figure fled.\\nMarisol left with coworkers.\\nShe will never know why tonight went differently.",
+        "neutral": "Security conducted a sweep after she already left.\\nNo contact was made.\\nOutcome unknown.",
+        "bad": "Security arrived late.\\nThe confrontation happened off-camera.\\nMarisol survived \u2014 but the cost was not small."
       }
     },
     {
-      "id": "warn",
+      "id": "anonymous_warning",
       "title": "Send Anonymous Warning",
+      "minPhase": 4,
       "risk": 0,
-      "threatDelta": -2,
-      "requires": {
-        "any": [
-          "anomaly:signal_gap",
-          "relationship:R",
-          "threat_confirmed",
-          "vehicle"
-        ]
-      },
+      "threatDelta": -6,
       "endings": {
-        "good": "A warning hits the right nerve at the right moment.\\nMarisol delays. Finds a coworker. Leaves with witnesses.\\n\\nSometimes the smallest nudge does the most good.",
-        "neutral": "She receives it. Hesitates. Goes anyway.\\n\\nA warning is not a shield\u2014only a chance.",
-        "bad": "It arrives too late.\\n\\nThe system does not punish you.\\nReality does."
+        "good": "Message delivered.\\nMarisol delayed her exit and left with staff.\\nThe garage remained empty when the second figure returned.",
+        "neutral": "Message delivered. She hesitated, then left anyway.\\nNo incident recorded on-site.",
+        "bad": "Message arrived too late.\\nShe read it after the encounter had already started."
       }
     },
     {
-      "id": "authorities",
+      "id": "escalate_authorities",
       "title": "Escalate to Authorities",
+      "minPhase": 4,
       "risk": 3,
-      "threatDelta": -1,
-      "requires": [],
+      "threatDelta": -2,
       "endings": {
-        "good": "A unit diverts immediately\u2014rare alignment.\\nThey intercept the threat before it becomes violence.\\n\\nYou got lucky.\\nDon\u2019t build a strategy on luck.",
-        "neutral": "Your report enters a queue.\\nProcedure is slower than harm.\\n\\nBy the time someone reads it, the moment has passed.",
-        "bad": "You act loudly, and you attract attention\u2014without speed.\\nThe threat slips through the same cracks you tried to use."
+        "good": "An officer happened to be nearby and responded immediately.\\nIt was luck.\\nLuck counts.",
+        "neutral": "Report entered the queue.\\nNo immediate response.\\nThe moment passed.",
+        "bad": "Noise without timing.\\nThe response came after the damage."
       }
+    }
+  ],
+  "epilogueFeed": [
+    {
+      "who": "BROOKS",
+      "text": "Next time you drag me into this, I\u2019m picking the donut place."
     },
     {
-      "id": "none",
-      "title": "Do Nothing",
-      "risk": 0,
-      "threatDelta": 0,
-      "requires": [],
-      "endings": {
-        "good": "No intervention recorded.\\n\\nNothing happens.\\nOr nothing is captured.\\n\\nThe system doesn\u2019t celebrate.\\nIt only continues.",
-        "neutral": "No intervention recorded.\\nMarisol survives. Trauma persists.\\n\\nThe city moves on.\\nShe does not.",
-        "bad": "No intervention recorded.\\nViolence occurs at 00:01.\\n\\nInaction is still a choice.\\nThe system will remember it."
-      }
+      "who": "SUDO",
+      "text": "You chose.\\nThe system noticed."
+    },
+    {
+      "who": "LARK",
+      "text": "There will be others."
     }
   ]
 }

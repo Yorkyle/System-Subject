@@ -1,56 +1,50 @@
-import { createInitialState, startCase, enterCase, applyLead, chooseIntervention, setLeftTab, setRightTab, goHome, replay, canSeeLead, interventionsUnlocked, flushOne, confirmIntervention, cancelIntervention } from "./engine.js";
+// app.js — v4
+import {
+  createInitialState, loadCaseIndex, startCase, enterCase,
+  applyLead, chooseIntervention, confirmIntervention, cancelIntervention,
+  flushOne, toggleAutoPlay, setLeftTab, setRightTab
+} from "./engine.js";
 import { render } from "./ui.js";
-import { loadSave, writeSave, clearSave } from "./storage.js";
 
 const els = {
+  feed: document.getElementById("feed"),
+  feedControls: document.getElementById("feedControls"),
   leftPanel: document.getElementById("leftPanel"),
   rightPanel: document.getElementById("rightPanel"),
-  feed: document.getElementById("feed"),
   leftTabs: document.getElementById("leftTabs"),
   rightTabs: document.getElementById("rightTabs"),
-  rightTitle: document.getElementById("rightTitle"),
-  tinyStatus: document.getElementById("tinyStatus"),
-  footerHint: document.getElementById("footerHint"),
   pillScreen: document.getElementById("pillScreen"),
-  pillThreat: document.getElementById("pillThreat"),
-  pillPulls: document.getElementById("pillPulls"),
   pillRisk: document.getElementById("pillRisk"),
-  btnJumpNewest: document.getElementById("btnJumpNewest"),
-  btnClearHighlight: document.getElementById("btnClearHighlight"),
+  pillPulls: document.getElementById("pillPulls"),
+  pillThreat: document.getElementById("pillThreat"),
+  hint: document.getElementById("hint")
 };
 
-let state = createInitialState();
-state.interventionsUnlockedFn = () => interventionsUnlocked(state);
-state.canSeeLeadFn = (lead) => canSeeLead(state, lead);
+const state = createInitialState();
 
 boot();
 
 async function boot(){
-  state.caseList = await loadCaseIndex();
-  state.screen = "home";
-
-  const save = loadSave();
-  if(save?.lastCaseId){
-    // MVP: no auto-resume
-  }
-  startFeedTicker();
+  const idx = await fetch("./data/cases.json").then(r=>r.json());
+  loadCaseIndex(state, idx);
   render(state, els, dispatch);
+  startAutoTicker();
 }
 
-function startFeedTicker(){
-  // Drip-feed queued messages for a more 'live' feel
+function startAutoTicker(){
+  // Autoplay tick: slower, more dramatic
   setInterval(()=>{
+    if(!state.autoPlay) return;
     const changed = flushOne(state);
-    if(changed){ render(state, els, dispatch); }
-  }, 650);
+    if(changed) render(state, els, dispatch);
+  }, 1400);
 }
 
 async function dispatch(action){
   switch(action.type){
     case "OPEN_CASE": {
-      const c = await loadCaseById(action.caseId);
-      startCase(state, c);
-      writeSave({ lastCaseId: action.caseId });
+      const data = await fetch(`./data/cases/${action.id}.json`).then(r=>r.json());
+      startCase(state, data);
       render(state, els, dispatch);
       break;
     }
@@ -60,12 +54,12 @@ async function dispatch(action){
       break;
     }
     case "LEAD": {
-      applyLead(state, action.leadId);
+      applyLead(state, action.id);
       render(state, els, dispatch);
       break;
     }
     case "INTERVENTION": {
-      chooseIntervention(state, action.interventionId);
+      chooseIntervention(state, action.id);
       render(state, els, dispatch);
       break;
     }
@@ -79,6 +73,21 @@ async function dispatch(action){
       render(state, els, dispatch);
       break;
     }
+    case "NEXT_FEED": {
+      const changed = flushOne(state);
+      if(changed) render(state, els, dispatch);
+      break;
+    }
+    case "TOGGLE_AUTO": {
+      toggleAutoPlay(state);
+      render(state, els, dispatch);
+      break;
+    }
+    case "CLEAR_FEED": {
+      state.feed = [];
+      render(state, els, dispatch);
+      break;
+    }
     case "SET_LEFT_TAB": {
       setLeftTab(state, action.tab);
       render(state, els, dispatch);
@@ -89,34 +98,10 @@ async function dispatch(action){
       render(state, els, dispatch);
       break;
     }
-    case "REPLAY": {
-      replay(state);
-      render(state, els, dispatch);
-      break;
-    }
     case "HOME": {
-      goHome(state);
-      render(state, els, dispatch);
+      // simple reload-ish
+      window.location.reload();
       break;
     }
-    case "RESET_SAVE": {
-      clearSave();
-      render(state, els, dispatch);
-      break;
-    }
-    default:
-      break;
   }
-}
-
-async function loadCaseIndex(){
-  const res = await fetch("./data/cases.json", { cache:"no-store" });
-  if(!res.ok) throw new Error("Failed to load case index");
-  return await res.json();
-}
-
-async function loadCaseById(caseId){
-  const res = await fetch(`./data/cases/${caseId}.json`, { cache:"no-store" });
-  if(!res.ok) throw new Error("Failed to load case");
-  return await res.json();
 }
