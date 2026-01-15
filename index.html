@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>System Subject — Case 001</title>
+  <link rel="stylesheet" href="./css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand">
+      <div class="dot"></div>
+      <div class="brandText">
+        <div class="title">SYSTEM SUBJECT</div>
+        <div class="subtitle">observer terminal</div>
+      </div>
+    </div>
+
+    <div class="status">
+      <div class="pill" id="pillScreen">SCREEN: —</div>
+      <div class="pill" id="pillThreat">THREAT: —</div>
+      <div class="pill" id="pillPulls">PULLS: —</div>
+      <div class="pill" id="pillRisk">RISK: —</div>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="panel left">
+      <div class="panelTop">
+        <h2>SUBJECT</h2>
+        <div class="tabs" id="leftTabs" role="tablist" aria-label="Left panel tabs"></div>
+      </div>
+      <div id="leftPanel"></div>
+    </section>
+
+    <section class="panel center">
+      <div class="panelTop">
+        <h2>FEED</h2>
+        <div class="tinyStatus" id="tinyStatus"></div>
+      </div>
+      <div id="feed" class="feed" aria-live="polite"></div>
+
+      <div class="feedControls">
+        <button class="iconBtn" id="btnJumpNewest" title="Jump to newest">Newest</button>
+        <button class="iconBtn" id="btnClearHighlight" title="Clear highlight">Clear</button>
+      </div>
+    </section>
+
+    <section class="panel right">
+      <div class="panelTop">
+        <h2 id="rightTitle">ACTIONS</h2>
+        <div class="tabs" id="rightTabs" role="tablist" aria-label="Right panel tabs"></div>
+      </div>
+      <div id="rightPanel"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="small mono">Observer channel active. Limited access. Choose carefully.</div>
+    <div class="small mono" id="footerHint"></div>
+  </footer>
+
+  <script type="module" src="./js/app.js"></script>
+</body>
+</html>
